@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 32px;
+}
+
+/* Wat extra witruimte bij de controls */
+input,
+option,
+button {
+  height: 2rem;   
+  margin-bottom: 0.25rem;
+}
+
+/* Plaats je oplossing hieronder */
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+@media screen and (min-width: 576px) {
+
+  form {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "el  el  el  el  el  el  el  el  pl  pl  pl  pl "
+      "e   e   e   e   e   e   e   e   p   p   p   p  "
+      "al  al  al  al  al  al  al  al  al  al  al  al "
+      "a   a   a   a   a   a   a   a   a   a   a   a  "
+      "zl  zl  zl  zl  cil cil cil cil cil cil cil cil"
+      "z   z   z   z   ci  ci  ci  ci  ci  ci  ci  ci "
+      "col col col col col col col col col col col col"
+      "co  co  co  co  co  co  co  co  co  co  co  co "
+      "b   b   b   b   .   .   .   .   .   .   .   .  "
+    ;
+  }
+
+  label[for="input-email"] {
+    grid-area: el;
+  }
+
+  label[for="input-password"] {
+    grid-area: pl;
+  }
+
+  #input-email {
+    grid-area: e;
+  }
+
+  #input-password {
+    grid-area: p;
+  }
+
+  label[for="input-address"] {
+    grid-area: al;
+  }
+
+  #input-address {
+    grid-area: a;
+  }
+
+  label[for="input-zip"] {
+    grid-area: zl;
+  }
+
+  #input-zip {
+    grid-area: z;
+  }
+
+  label[for="input-city"] {
+    grid-area: cil;
+  }
+
+  #input-city {
+    grid-area: ci;
+  }
+
+  label[for="input-country"] {
+    grid-area: col;
+  }
+
+  #input-country {
+    grid-area: co;
+  }
+
+  button {
+    grid-area: b;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  form {
+    grid-template-areas:
+      "el  el  el  el  el  el  el  el  pl  pl  pl  pl "
+      "e   e   e   e   e   e   e   e   p   p   p   p  "
+      "al  al  al  al  al  al  al  al  al  al  al  al "
+      "a   a   a   a   a   a   a   a   a   a   a   a  "
+      "zl  zl  zl  cil cil cil cil cil col col col col"
+      "z   z   z   ci   ci  ci  ci  ci  co  co  co  co "
+      "b   b   b   .   .   .   .   .   .   .   .   .  "
+    ;
+  }
+}
+
+@media screen and (min-width: 1264px) {
+  form {
+    max-width: 1200px;
+    margin: auto;
+  }
+}

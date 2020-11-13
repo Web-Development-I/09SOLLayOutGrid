@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Form</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <h1>Responsive form</h1>
+  <form>
+    <label for="input-email">E-mail</label>
+    <input type="email" class="form-control" id="input-email" name="input-email" autofocus>
+
+    <label for="input-password">Wachtwoord</label>
+    <input type="password" class="form-control" id="input-password" name="input-password">
+
+    <label for="input-address">Adres</label>
+    <input type="text" class="form-control" id="input-address" name="input-address" placeholder="Kouter 5">
+
+    <label for="input-zip">Postcode</label>
+    <input type="text" class="form-control" id="input-zip" name="input-zip">
+
+    <label for="input-city">Woonplaats</label>
+    <input type="text" class="form-control" id="input-city">
+
+    <label for="input-country">Land</label>
+    <input list="common-countries" id="input-country" name="input-country" value="België"/>
+    <datalist id="common-countries">
+      <option value="België">
+      <option value="Frankrijk">
+      <option value="Nederland">
+      <option value="Luxemburg">
+      <option value="Duitsland">
+    </datalist>
+
+    <button>Verzenden</button>
+  </form>
+
+</body>
+
+</html>

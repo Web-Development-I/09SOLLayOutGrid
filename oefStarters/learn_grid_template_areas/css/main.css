@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+/* De hoogte en de rand van het voorbeeld div-element instellen */
+#center_example {
+  height: 5em;
+  border: 1px solid #000;
+}
+
+/* Om tekst zowel horizontaal als verticaal te centreren kan je 
+   gebruikmaken van grid layout */
+.grid-center {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Plaats je oplossing hieronder */
+/*********************************/
+
+/* Creëren van de grid container en de grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 5rem);
+  grid-auto-rows: 5rem;
+  grid-template-areas:
+    '.    .    .    box1 .   '
+    'box2 box3 box4 box5 box6'
+    '.    .    .    box7 .   '
+    '.    .    .    box8 .   ';
+  gap: 0.2rem;
+}
+
+/* Opmaak van de vierkanten */
+.grid-container div {
+  font-size: 2rem;
+  color: darkblue;
+  background-color: cyan;
+  border: 1px solid darkblue;
+}
+
+/* De verschillende boxen (grid items) positioneren op de grid  */
+
+#box1 {
+  grid-area: box1;
+}
+
+#box2 {
+  grid-area: box2;
+}
+
+#box3 {
+  grid-area: box3;
+}
+
+#box4 {
+  grid-area: box4;
+}
+
+#box5 {
+  grid-area: box5;
+}
+
+#box6 {
+  grid-area: box6;
+}
+
+#box7 {
+  grid-area: box7;
+}
+
+#box8 {
+  grid-area: box8;
+}

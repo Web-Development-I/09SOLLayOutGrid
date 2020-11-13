@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+}
+
+.container>* {
+  background-color: lightcyan;
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+/* Plaats je oplossing hieronder */
+
+@media screen and (min-width:700px) {
+
+  /* Hieronder vind je twee mogelijke oplossingen. De oplossing
+        die in commentaar staat maakt gebruik van 'named grid lines'.
+        Een derde mogelijke oplossing met grid-template-areas 
+        vind je in een apart bestand. */
+  .container {
+    grid-template-columns: [container-start] 20ch 1fr 15ch;
+    /* grid-template-rows: auto [main-start] auto auto auto; */
+
+    max-width: 960px;
+    margin: auto;
+  }
+
+  header,
+  footer {
+    grid-column: 1/4;
+    /* grid-column: container-start/-1; */
+  }
+
+  nav,
+  main {
+    grid-row: 2/4;
+    /* grid-row: main-start/-2; */
+  }
+}

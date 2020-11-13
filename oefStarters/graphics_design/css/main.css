@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: #411b00;
+  background-color: #969174;
+  padding: 5px;
+}
+
+p {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+body {
+  background-color: #fff4e4;
+  margin: 2.5rem;
+}
+
+/* Plaats je oplosing hieronder */
+
+article {
+  display: grid;
+  grid-template-columns: 100px 1fr 200px 200px 100px;
+}
+
+h1 {
+  grid-column: span 4;
+  grid-row: 3;
+}
+
+img {
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.lead {
+  grid-row: 4;
+  grid-column: 1 / span 3;
+}
+
+p{
+  /* De witruimte tussen twee paragrafen moet behouden blijven op 1em en mag niet verdubbelen.
+  We halveren bijgevolg margin-top en margin-bottom. */
+  margin-top:0.5em;
+  margin-bottom:0.5em;
+  grid-column: 2 / span 4;
+}

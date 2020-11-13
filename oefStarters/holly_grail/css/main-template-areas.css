@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+}
+
+.container > * {
+  background-color: lightcyan;
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+/* Plaats je oplossing hieronder */
+
+@media screen and (min-width: 700px) {
+  /* Een derde mogelijke oplossing met grid-template-areas */
+
+  .container {
+    grid-template-columns: 20ch 1fr 15ch;
+    grid-template-areas:
+      'header header header'
+      'nav    main   sidebar'
+      'nav    main   advertising'
+      'footer footer footer';
+
+    max-width: 960px;
+    margin: auto;
+  }
+
+  header {
+    grid-area: header;
+  }
+  footer {
+    grid-area: footer;
+  }
+  nav {
+    grid-area: nav;
+  }
+  main {
+    grid-area: main;
+  }
+  #sidebar {
+    grid-area: sidebar;
+  }
+  #advertising {
+    grid-area: advertising;
+  }
+}

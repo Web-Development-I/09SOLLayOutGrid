@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+.fotos {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* de afbeeldingen 'responsive' maken */
+.fotos img {
+  max-width: 100%;
+}
+
+/* mobile view*/
+.fotos img {
+  grid-column: span 12;
+}
+
+@media screen and (min-width: 416px) {
+  .fotos img {
+    grid-column: span 6;
+  }
+}
+
+@media screen and (min-width: 616px) {
+  .fotos img {
+    grid-column: span 4;
+  }
+}
+
+@media screen and (min-width: 816px) {
+  .fotos img {
+    grid-column: span 3;
+  }
+}
+
+/* voor de 'giant screens'  */
+main {
+  max-width: 2000px;
+  margin: auto;
+}
