@@ -15,7 +15,7 @@
   display: grid;
   /* en definiëren vier kolommen*/
   grid-template-columns: repeat(4, 150px);
-  /* de rijen moeten niet expliciet gedefinieerd worden
+  /* de rijen moeten niet expliciet gedefinieerd worden */
 }
 
 #box1 {
